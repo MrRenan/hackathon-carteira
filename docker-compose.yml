@@ -1,0 +1,28 @@
+services:
+  mongo-carteira:
+    image: mongo:6.0
+    container_name: mongo-carteira
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: hackathon-carteira
+    ports:
+      - "27020:27017"
+    volumes:
+      - mongo-carteira-data:/data/db
+
+  carteira-service:
+    build: ..
+    container_name: carteira-service
+    ports:
+      - "8083:8080"
+    depends_on:
+      - mongo-carteira
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATA_MONGODB_USERNAME: ${MONGO_ROOT_USERNAME}
+      SPRING_DATA_MONGODB_PASSWORD: ${MONGO_ROOT_PASSWORD}
+
+volumes:
+  mongo-carteira-data: {}

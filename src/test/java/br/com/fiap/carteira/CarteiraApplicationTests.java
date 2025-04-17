@@ -1,10 +1,10 @@
-package br.com.fiap.hackathon_carteira;
+package br.com.fiap.carteira;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HackathonCarteiraApplicationTests {
+class CarteiraApplicationTests {
 
 	@Test
 	void contextLoads() {

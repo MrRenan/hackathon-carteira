@@ -1,13 +1,13 @@
-package br.com.fiap.hackathon_carteira;
+package br.com.fiap.carteira;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HackathonCarteiraApplication {
+public class CarteiraApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HackathonCarteiraApplication.class, args);
+		SpringApplication.run(CarteiraApplication.class, args);
 	}
 
 }
