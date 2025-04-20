@@ -13,7 +13,7 @@ services:
       - mongo-carteira-data:/data/db
 
   carteira-service:
-    build: ..
+    build: .
     container_name: carteira-service
     ports:
       - "8083:8080"
