@@ -6,7 +6,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "paciente-service", url = "${url.carteira-service}")
+@FeignClient(name = "paciente-service", url = "${url.paciente-service}")
 public interface PacienteServiceClient extends PacienteServicePort {
 
     @GetMapping("/{cpf}")
